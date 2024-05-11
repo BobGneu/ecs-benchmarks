@@ -7,6 +7,10 @@ Interested in an ECS for your project but don't know where to start? This may be
 - Please open a discussion, issue for questions, comments, or concerns.
 - Pull Requests are welcome
 
+## Implementation Notes
+
+[More about the test cases](docs/TestCases.md)
+
 ## Setup & Exeution
 
 1. Checkout the repo
