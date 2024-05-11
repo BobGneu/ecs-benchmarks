@@ -1,0 +1,22 @@
+{
+  "name": "ecs-benchmark",
+  "version": "1.0.0",
+  "description": "A like for like comparison between Entity Component System (ECS) Libraries in the JS/TS Ecosystem",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest",
+    "start": "vitest bench"
+  },
+  "author": {
+    "name": "Bob Chatman",
+    "email": "bob.chatman@gmail.com",
+    "url": "http://gneu.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}
