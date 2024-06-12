@@ -6,4 +6,5 @@ export { default as miniplex } from "./miniplex";
 export { default as nano_ecs } from "./nano-ecs";
 export { default as performECS } from "./perform-ecs";
 export { default as picoes } from "./picoes";
+export { default as piecs } from "./piecs";
 
