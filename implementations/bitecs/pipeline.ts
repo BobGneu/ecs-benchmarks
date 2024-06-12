@@ -16,7 +16,7 @@ import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
 
 class BitECSPipelineImplementation extends ECSBenchmarkHarness<IWorld, number> {
     get name(): string {
-        return "bitECS - Direct";
+        return "bitECS - Pipeline";
     }
 
     private world!: IWorld;
