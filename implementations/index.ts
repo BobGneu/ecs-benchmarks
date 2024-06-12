@@ -9,4 +9,5 @@ export { default as picoes } from "./picoes";
 export { default as piecs } from "./piecs";
 export { default as TinyECS } from "./TinyECS";
 export { default as uecs } from "./uecs";
+export { default as WolfECS } from "./wolf-ecs";
 
