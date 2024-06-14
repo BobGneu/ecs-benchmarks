@@ -1,12 +1,13 @@
 import nano from "nano-ecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/nano-ecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class NanoECSImplementation extends ECSBenchmarkHarness<nano, any> {
     get name(): string {
-        return "nano-ecs";
+        return `${name} v.${version}`;
     }
 
     private world!: nano;

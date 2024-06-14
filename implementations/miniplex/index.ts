@@ -1,5 +1,6 @@
 import { World } from "miniplex";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/miniplex/package.json";
 import { createMovementSystem } from "./Systems/createMovementSystem";
 
 type Entity = {
@@ -9,7 +10,7 @@ type Entity = {
 
 class MiniPlexImplementation extends ECSBenchmarkHarness<World, Entity> {
     get name(): string {
-        return "miniplex";
+        return `${name} v.${version}`;
     }
 
     private world!: World;
@@ -23,7 +24,7 @@ class MiniPlexImplementation extends ECSBenchmarkHarness<World, Entity> {
     }
 
     teardown(): void | Promise<void> | undefined {
-        /* TODO document why this method 'teardown' is empty */
+        /* TODO: document why this method 'teardown' is empty */
     }
 
     createEntity(): Entity {

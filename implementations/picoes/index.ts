@@ -1,10 +1,11 @@
 import { Entity, World } from "picoes";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/picoes/package.json";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class PicoESImplementation extends ECSBenchmarkHarness<World, Entity> {
     get name(): string {
-        return "PicoES";
+        return `${name} v.${version}`;
     }
 
     private world!: World;

@@ -1,4 +1,5 @@
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/goodluck/package.json";
 import { position } from "./Components/Position";
 import { velocity } from "./Components/Velocity";
 import { HAS_POSITION, HAS_VELOCITY } from "./constants";
@@ -7,7 +8,7 @@ import { World } from "./World";
 
 class GoodluckImplementation extends ECSBenchmarkHarness<World, number> {
     get name(): string {
-        return "goodluck";
+        return `${name} v.${version}`;
     }
 
     private world!: World;

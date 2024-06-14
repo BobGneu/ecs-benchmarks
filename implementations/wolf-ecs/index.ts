@@ -1,10 +1,11 @@
 import { ECS, types } from "wolf-ecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/wolf-ecs/package.json";
 import { createMovementSystem } from "./Systems/createMovementSystem";
 
 class WolfECSImplementation extends ECSBenchmarkHarness<ECS, number> {
     get name(): string {
-        return "WolfECS";
+        return `${name} v.${version}`;
     }
 
     private world!: ECS;

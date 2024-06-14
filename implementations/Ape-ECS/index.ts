@@ -1,12 +1,13 @@
 import { Entity, World } from "ape-ecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/ape-ecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/PhysicsSystem";
 
 class ApeECSImplementation extends ECSBenchmarkHarness<World, Entity> {
     get name(): string {
-        return "Ape-ECS";
+        return `${name} v.${version}`;
     }
 
     private world!: World;

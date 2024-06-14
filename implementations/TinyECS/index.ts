@@ -1,13 +1,14 @@
 import { EntityManager, Messanger as Messenger } from "tiny-ecs";
 import Entity from "tiny-ecs/lib/Entity";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/tiny-ecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class TinyECSImplementation extends ECSBenchmarkHarness<EntityManager, Entity> {
     get name(): string {
-        return "TinyECS";
+        return `${name} v.${version}`;
     }
 
     private world!: EntityManager;

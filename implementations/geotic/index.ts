@@ -1,12 +1,13 @@
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
 import { Engine, Entity, World } from "../../vendored/geotic";
+import { name, version } from "../../vendored/geotic/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class GeoticImplementation extends ECSBenchmarkHarness<World, Entity> {
     get name(): string {
-        return "geotic";
+        return `${name} - ${version}`;
     }
 
     private world!: World;

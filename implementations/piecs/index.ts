@@ -1,12 +1,13 @@
 import { createEntitySystem, World } from "piecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/piecs/package.json";
 import { createPositionComponent } from "./Components/Position";
 import { createVelocityComponent } from "./Components/Velocity";
 import { createMovementSystem } from "./Systems/createMovementSystem";
 
 class PiECSImplementation extends ECSBenchmarkHarness<World, number> {
     get name(): string {
-        return "piecs";
+        return `${name} v.${version}`;
     }
 
     private world!: World;

@@ -13,10 +13,11 @@ import {
     Types,
 } from "bitecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/bitecs/package.json";
 
 class BitECSPipelineImplementation extends ECSBenchmarkHarness<IWorld, number> {
     get name(): string {
-        return "bitECS - Pipeline";
+        return `${name} - Pipeline v.${version}`;
     }
 
     private world!: IWorld;

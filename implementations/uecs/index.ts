@@ -1,12 +1,13 @@
 import { World } from "uecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/uecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class UECSImplementation extends ECSBenchmarkHarness<World, number> {
     get name(): string {
-        return "uecs";
+        return `${name} v.${version}`;
     }
 
     private world!: World;

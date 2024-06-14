@@ -1,12 +1,13 @@
 import { Entity, Format, Query, Schema, World } from "harmony-ecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/harmony-ecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { movementSystem } from "./Systems/MovementSystem";
 
 class HarmonyImplementation extends ECSBenchmarkHarness<any, number> {
     get name(): string {
-        return "harmony-ecs";
+        return `${name} v.${version}`;
     }
 
     private world!: World.Struct;

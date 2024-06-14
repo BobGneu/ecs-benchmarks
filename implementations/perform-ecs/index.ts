@@ -1,12 +1,13 @@
 import { ECS, Entity, makeComponent } from "perform-ecs";
 import { ECSBenchmarkHarness } from "../../ECSBenchmarkHarness";
+import { name, version } from "../../node_modules/perform-ecs/package.json";
 import { Position } from "./Components/Position";
 import { Velocity } from "./Components/Velocity";
 import { MovementSystem } from "./Systems/MovementSystem";
 
 class PerformECSImplementation extends ECSBenchmarkHarness<ECS, Entity> {
     get name(): string {
-        return "Perform ECS";
+        return `${name} v.${version}`;
     }
 
     private world!: ECS;
