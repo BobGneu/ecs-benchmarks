@@ -18,11 +18,11 @@
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^20.13.0",
-        "@vitest/coverage-v8": "^1.6.0",
-        "@vitest/ui": "^1.6.0",
+        "@vitest/coverage-v8": "^1.6.1",
+        "@vitest/ui": "^1.6.1",
         "@vitest/web-worker": "^1.6.0",
         "typescript": "^5.4.5",
-        "vitest": "^1.6.0"
+        "vitest": "^1.6.1"
     },
     "dependencies": {
         "@javelin/ecs": "^1.0.0-alpha.13",
