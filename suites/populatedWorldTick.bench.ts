@@ -1,5 +1,5 @@
 import { bench, describe } from "vitest";
-import { getImplementations } from "./getImplementations";
+import { getBenchmarkImplementations } from "./getImplementations";
 
 interface Bracket {
     count: number;
@@ -14,7 +14,7 @@ describe.each([
 ])(
     "World Tick with $count Entities, $relevant are relevant",
     ({ count, relevant }: Bracket) => {
-        for (const implementation of getImplementations()) {
+        for (const implementation of getBenchmarkImplementations()) {
             let entities: Array<any>;
 
             bench(

@@ -1,11 +1,11 @@
 import { bench, describe } from "vitest";
-import * as implementations from "../implementations";
+import { getBenchmarkImplementations } from "./getImplementations";
 
 describe("World Tick without entities", (count) => {
     let world: any;
     let entity: any;
 
-    for (const implementation of Object.values(implementations)) {
+    for (const implementation of Object.values(getBenchmarkImplementations)) {
         bench(
             implementation.name,
             async () => {

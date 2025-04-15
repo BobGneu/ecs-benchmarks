@@ -5,5 +5,11 @@ import Empty from "../implementations/Empty";
 const implementations = Object.values(implementationMap);
 
 export function getImplementations() {
-    return [Empty, ...implementations] as ECSBenchmarkHarness<any, any>[];
+    return implementations as ECSBenchmarkHarness<any, any>[];
+}
+
+export function getBenchmarkImplementations() {
+    return [Empty, ...implementations] as Array<
+        ECSBenchmarkHarness<any, any> & { world: any }
+    >;
 }

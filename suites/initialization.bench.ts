@@ -1,8 +1,8 @@
 import { bench, describe } from "vitest";
-import { getImplementations } from "./getImplementations";
+import { getBenchmarkImplementations } from "./getImplementations";
 
 describe("Initialization", () => {
-    for (const implementation of getImplementations()) {
+    for (const implementation of getBenchmarkImplementations()) {
         bench(
             implementation.name,
             async () => {
