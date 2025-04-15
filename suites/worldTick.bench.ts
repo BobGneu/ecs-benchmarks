@@ -5,7 +5,7 @@ describe("World Tick without entities", (count) => {
     let world: any;
     let entity: any;
 
-    for (const implementation of Object.values(getBenchmarkImplementations)) {
+    for (const implementation of Object.values(getBenchmarkImplementations())) {
         bench(
             implementation.name,
             async () => {
