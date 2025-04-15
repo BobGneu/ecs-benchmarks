@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [current, latest]
+        node-version: [22, latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
