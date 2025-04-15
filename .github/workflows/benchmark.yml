@@ -36,4 +36,5 @@ jobs:
       - name: Save Summary
         uses: actions/upload-artifact@v4
         with:
+          name: results.${{ matrix.node-version }}.json
           path: reports/results.json
