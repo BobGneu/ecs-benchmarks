@@ -11,7 +11,7 @@ export default defineConfig({
             outputFile: "verbose",
             outputJson: "reports/results.json",
             compare: "reports/baseline.json",
-            reporters: ["verbose", "default"],
+            reporters: ["verbose"],
         },
         coverage: {
             all: true,
