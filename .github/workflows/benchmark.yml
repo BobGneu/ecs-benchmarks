@@ -1,33 +1,39 @@
 name: Benchmarks
 
 on:
-    push:
-        branches: ["main", "develop"]
-    pull_request:
-        branches: ["main", "develop"]
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+    branches: ["main", "develop"]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [lts/*, latest]
-                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    strategy:
+      matrix:
+        node-version: [lts/*, latest]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-        steps:
-            - uses: actions/checkout@v4
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Install
-              run: npm ci
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
 
-            - name: Test
-              run: npm test
+      - name: Install
+        run: npm ci
 
-            - name: Benchmark
-              run: npm start
+      - name: Test
+        run: npm test
+
+      - name: Benchmark
+        run: npm start
+
+      - name: Save Summary
+        uses: actions/upload-artifact@v4
+        with:
+          path: reports/results.json
